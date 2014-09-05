@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC83123519B9C150007E9B92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83123419B9C150007E9B92 /* Cocoa.framework */; };
+		AC83123F19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83123D19B9C150007E9B92 /* InfoPlist.strings */; };
+		AC83124119B9C150007E9B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83124019B9C150007E9B92 /* main.m */; };
+		AC83124519B9C150007E9B92 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AC83124319B9C150007E9B92 /* Credits.rtf */; };
+		AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83124719B9C150007E9B92 /* YGAppDelegate.m */; };
+		AC83124B19B9C150007E9B92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC83124919B9C150007E9B92 /* MainMenu.xib */; };
+		AC83124D19B9C150007E9B92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC83124C19B9C150007E9B92 /* Images.xcassets */; };
+		AC83125419B9C150007E9B92 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83125319B9C150007E9B92 /* XCTest.framework */; };
+		AC83125519B9C150007E9B92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83123419B9C150007E9B92 /* Cocoa.framework */; };
+		AC83125D19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83125B19B9C150007E9B92 /* InfoPlist.strings */; };
+		AC83125F19B9C150007E9B92 /* MBTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83125E19B9C150007E9B92 /* MBTilesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC83125619B9C150007E9B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83122919B9C150007E9B92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC83123019B9C150007E9B92;
+			remoteInfo = MBTiles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC83123119B9C150007E9B92 /* MBTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC83123419B9C150007E9B92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AC83123719B9C150007E9B92 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AC83123819B9C150007E9B92 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AC83123919B9C150007E9B92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC83123C19B9C150007E9B92 /* MBTiles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MBTiles-Info.plist"; sourceTree = "<group>"; };
+		AC83123E19B9C150007E9B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC83124019B9C150007E9B92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC83124219B9C150007E9B92 /* MBTiles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBTiles-Prefix.pch"; sourceTree = "<group>"; };
+		AC83124419B9C150007E9B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AC83124619B9C150007E9B92 /* YGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGAppDelegate.h; sourceTree = "<group>"; };
+		AC83124719B9C150007E9B92 /* YGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YGAppDelegate.m; sourceTree = "<group>"; };
+		AC83124A19B9C150007E9B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AC83124C19B9C150007E9B92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC83125219B9C150007E9B92 /* MBTilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBTilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC83125319B9C150007E9B92 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AC83125A19B9C150007E9B92 /* MBTilesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MBTilesTests-Info.plist"; sourceTree = "<group>"; };
+		AC83125C19B9C150007E9B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC83125E19B9C150007E9B92 /* MBTilesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTilesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC83122E19B9C150007E9B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83123519B9C150007E9B92 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC83124F19B9C150007E9B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83125519B9C150007E9B92 /* Cocoa.framework in Frameworks */,
+				AC83125419B9C150007E9B92 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC83122819B9C150007E9B92 = {
+			isa = PBXGroup;
+			children = (
+				AC83123A19B9C150007E9B92 /* MBTiles */,
+				AC83125819B9C150007E9B92 /* MBTilesTests */,
+				AC83123319B9C150007E9B92 /* Frameworks */,
+				AC83123219B9C150007E9B92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC83123219B9C150007E9B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC83123119B9C150007E9B92 /* MBTiles.app */,
+				AC83125219B9C150007E9B92 /* MBTilesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC83123319B9C150007E9B92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC83123419B9C150007E9B92 /* Cocoa.framework */,
+				AC83125319B9C150007E9B92 /* XCTest.framework */,
+				AC83123619B9C150007E9B92 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC83123619B9C150007E9B92 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC83123719B9C150007E9B92 /* AppKit.framework */,
+				AC83123819B9C150007E9B92 /* CoreData.framework */,
+				AC83123919B9C150007E9B92 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AC83123A19B9C150007E9B92 /* MBTiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC83124619B9C150007E9B92 /* YGAppDelegate.h */,
+				AC83124719B9C150007E9B92 /* YGAppDelegate.m */,
+				AC83124919B9C150007E9B92 /* MainMenu.xib */,
+				AC83124C19B9C150007E9B92 /* Images.xcassets */,
+				AC83123B19B9C150007E9B92 /* Supporting Files */,
+			);
+			path = MBTiles;
+			sourceTree = "<group>";
+		};
+		AC83123B19B9C150007E9B92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC83123C19B9C150007E9B92 /* MBTiles-Info.plist */,
+				AC83123D19B9C150007E9B92 /* InfoPlist.strings */,
+				AC83124019B9C150007E9B92 /* main.m */,
+				AC83124219B9C150007E9B92 /* MBTiles-Prefix.pch */,
+				AC83124319B9C150007E9B92 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC83125819B9C150007E9B92 /* MBTilesTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC83125E19B9C150007E9B92 /* MBTilesTests.m */,
+				AC83125919B9C150007E9B92 /* Supporting Files */,
+			);
+			path = MBTilesTests;
+			sourceTree = "<group>";
+		};
+		AC83125919B9C150007E9B92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC83125A19B9C150007E9B92 /* MBTilesTests-Info.plist */,
+				AC83125B19B9C150007E9B92 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC83123019B9C150007E9B92 /* MBTiles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC83126219B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTiles" */;
+			buildPhases = (
+				AC83122D19B9C150007E9B92 /* Sources */,
+				AC83122E19B9C150007E9B92 /* Frameworks */,
+				AC83122F19B9C150007E9B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBTiles;
+			productName = MBTiles;
+			productReference = AC83123119B9C150007E9B92 /* MBTiles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC83125119B9C150007E9B92 /* MBTilesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC83126519B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTilesTests" */;
+			buildPhases = (
+				AC83124E19B9C150007E9B92 /* Sources */,
+				AC83124F19B9C150007E9B92 /* Frameworks */,
+				AC83125019B9C150007E9B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC83125719B9C150007E9B92 /* PBXTargetDependency */,
+			);
+			name = MBTilesTests;
+			productName = MBTilesTests;
+			productReference = AC83125219B9C150007E9B92 /* MBTilesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC83122919B9C150007E9B92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___yageek__";
+				TargetAttributes = {
+					AC83125119B9C150007E9B92 = {
+						TestTargetID = AC83123019B9C150007E9B92;
+					};
+				};
+			};
+			buildConfigurationList = AC83122C19B9C150007E9B92 /* Build configuration list for PBXProject "MBTiles" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC83122819B9C150007E9B92;
+			productRefGroup = AC83123219B9C150007E9B92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC83123019B9C150007E9B92 /* MBTiles */,
+				AC83125119B9C150007E9B92 /* MBTilesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC83122F19B9C150007E9B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83123F19B9C150007E9B92 /* InfoPlist.strings in Resources */,
+				AC83124D19B9C150007E9B92 /* Images.xcassets in Resources */,
+				AC83124519B9C150007E9B92 /* Credits.rtf in Resources */,
+				AC83124B19B9C150007E9B92 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC83125019B9C150007E9B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83125D19B9C150007E9B92 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC83122D19B9C150007E9B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */,
+				AC83124119B9C150007E9B92 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC83124E19B9C150007E9B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83125F19B9C150007E9B92 /* MBTilesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC83125719B9C150007E9B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC83123019B9C150007E9B92 /* MBTiles */;
+			targetProxy = AC83125619B9C150007E9B92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC83123D19B9C150007E9B92 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC83123E19B9C150007E9B92 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC83124319B9C150007E9B92 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC83124419B9C150007E9B92 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		AC83124919B9C150007E9B92 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC83124A19B9C150007E9B92 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		AC83125B19B9C150007E9B92 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC83125C19B9C150007E9B92 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC83126019B9C150007E9B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AC83126119B9C150007E9B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AC83126319B9C150007E9B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
+				INFOPLIST_FILE = "MBTiles/MBTiles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AC83126419B9C150007E9B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
+				INFOPLIST_FILE = "MBTiles/MBTiles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AC83126619B9C150007E9B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MBTiles.app/Contents/MacOS/MBTiles";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MBTilesTests/MBTilesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AC83126719B9C150007E9B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MBTiles.app/Contents/MacOS/MBTiles";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
+				INFOPLIST_FILE = "MBTilesTests/MBTilesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC83122C19B9C150007E9B92 /* Build configuration list for PBXProject "MBTiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83126019B9C150007E9B92 /* Debug */,
+				AC83126119B9C150007E9B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC83126219B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83126319B9C150007E9B92 /* Debug */,
+				AC83126419B9C150007E9B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC83126519B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTilesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83126619B9C150007E9B92 /* Debug */,
+				AC83126719B9C150007E9B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC83122919B9C150007E9B92 /* Project object */;
+}
