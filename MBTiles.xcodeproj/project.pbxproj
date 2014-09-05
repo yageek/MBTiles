@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D9CE94F27774C40AA540AEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B123515C5D894025B3CA01D0 /* libPods.a */; };
 		AC83123519B9C150007E9B92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83123419B9C150007E9B92 /* Cocoa.framework */; };
 		AC83123F19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83123D19B9C150007E9B92 /* InfoPlist.strings */; };
 		AC83124119B9C150007E9B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83124019B9C150007E9B92 /* main.m */; };
@@ -18,6 +19,9 @@
 		AC83125519B9C150007E9B92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83123419B9C150007E9B92 /* Cocoa.framework */; };
 		AC83125D19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83125B19B9C150007E9B92 /* InfoPlist.strings */; };
 		AC83125F19B9C150007E9B92 /* MBTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83125E19B9C150007E9B92 /* MBTilesTests.m */; };
+		AC83126A19B9C185007E9B92 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AC83126919B9C185007E9B92 /* Podfile */; };
+		AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */; };
+		AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320585CF955A45CD9347C56E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AC83123119B9C150007E9B92 /* MBTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC83123419B9C150007E9B92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AC83123719B9C150007E9B92 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +55,12 @@
 		AC83125A19B9C150007E9B92 /* MBTilesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MBTilesTests-Info.plist"; sourceTree = "<group>"; };
 		AC83125C19B9C150007E9B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC83125E19B9C150007E9B92 /* MBTilesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTilesTests.m; sourceTree = "<group>"; };
+		AC83126919B9C185007E9B92 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AC83126B19B9C251007E9B92 /* MBTilesDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDatabase.h; sourceTree = "<group>"; };
+		AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabase.m; sourceTree = "<group>"; };
+		AC83126E19B9E5F9007E9B92 /* MBTilesDatabaseInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDatabaseInfos.h; sourceTree = "<group>"; };
+		AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabaseInfos.m; sourceTree = "<group>"; };
+		B123515C5D894025B3CA01D0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC83123519B9C150007E9B92 /* Cocoa.framework in Frameworks */,
+				2D9CE94F27774C40AA540AEF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +88,12 @@
 		AC83122819B9C150007E9B92 = {
 			isa = PBXGroup;
 			children = (
+				AC83126919B9C185007E9B92 /* Podfile */,
 				AC83123A19B9C150007E9B92 /* MBTiles */,
 				AC83125819B9C150007E9B92 /* MBTilesTests */,
 				AC83123319B9C150007E9B92 /* Frameworks */,
 				AC83123219B9C150007E9B92 /* Products */,
+				320585CF955A45CD9347C56E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +112,7 @@
 				AC83123419B9C150007E9B92 /* Cocoa.framework */,
 				AC83125319B9C150007E9B92 /* XCTest.framework */,
 				AC83123619B9C150007E9B92 /* Other Frameworks */,
+				B123515C5D894025B3CA01D0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +130,7 @@
 		AC83123A19B9C150007E9B92 /* MBTiles */ = {
 			isa = PBXGroup;
 			children = (
+				AC83126819B9C159007E9B92 /* lib */,
 				AC83124619B9C150007E9B92 /* YGAppDelegate.h */,
 				AC83124719B9C150007E9B92 /* YGAppDelegate.m */,
 				AC83124919B9C150007E9B92 /* MainMenu.xib */,
@@ -154,6 +170,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AC83126819B9C159007E9B92 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AC83126E19B9E5F9007E9B92 /* MBTilesDatabaseInfos.h */,
+				AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */,
+				AC83126B19B9C251007E9B92 /* MBTilesDatabase.h */,
+				AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC83126219B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTiles" */;
 			buildPhases = (
+				C2A4866EA1794064B0A29D86 /* Check Pods Manifest.lock */,
 				AC83122D19B9C150007E9B92 /* Sources */,
 				AC83122E19B9C150007E9B92 /* Frameworks */,
 				AC83122F19B9C150007E9B92 /* Resources */,
+				59AAD873B1B64B2AA12627AF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,7 +227,7 @@
 		AC83122919B9C150007E9B92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = YG;
+				CLASSPREFIX = MB;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___yageek__";
 				TargetAttributes = {
@@ -231,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC83126A19B9C185007E9B92 /* Podfile in Resources */,
 				AC83123F19B9C150007E9B92 /* InfoPlist.strings in Resources */,
 				AC83124D19B9C150007E9B92 /* Images.xcassets in Resources */,
 				AC83124519B9C150007E9B92 /* Credits.rtf in Resources */,
@@ -248,11 +278,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59AAD873B1B64B2AA12627AF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A4866EA1794064B0A29D86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC83122D19B9C150007E9B92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */,
+				AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */,
 				AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */,
 				AC83124119B9C150007E9B92 /* main.m in Sources */,
 			);
@@ -384,8 +449,10 @@
 		};
 		AC83126319B9C150007E9B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320585CF955A45CD9347C56E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
@@ -397,8 +464,10 @@
 		};
 		AC83126419B9C150007E9B92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320585CF955A45CD9347C56E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MBTiles/MBTiles-Prefix.pch";
@@ -467,6 +536,7 @@
 				AC83126419B9C150007E9B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC83126519B9C150007E9B92 /* Build configuration list for PBXNativeTarget "MBTilesTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +545,7 @@
 				AC83126719B9C150007E9B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
