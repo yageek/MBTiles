@@ -22,6 +22,7 @@
 		AC83126A19B9C185007E9B92 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AC83126919B9C185007E9B92 /* Podfile */; };
 		AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */; };
 		AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */; };
+		AC83127319B9F36A007E9B92 /* MBTile.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83127219B9F36A007E9B92 /* MBTile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabase.m; sourceTree = "<group>"; };
 		AC83126E19B9E5F9007E9B92 /* MBTilesDatabaseInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDatabaseInfos.h; sourceTree = "<group>"; };
 		AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabaseInfos.m; sourceTree = "<group>"; };
+		AC83127119B9F36A007E9B92 /* MBTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTile.h; sourceTree = "<group>"; };
+		AC83127219B9F36A007E9B92 /* MBTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTile.m; sourceTree = "<group>"; };
 		B123515C5D894025B3CA01D0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +180,8 @@
 				AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */,
 				AC83126B19B9C251007E9B92 /* MBTilesDatabase.h */,
 				AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */,
+				AC83127119B9F36A007E9B92 /* MBTile.h */,
+				AC83127219B9F36A007E9B92 /* MBTile.m */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			files = (
 				AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */,
 				AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */,
+				AC83127319B9F36A007E9B92 /* MBTile.m in Sources */,
 				AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */,
 				AC83124119B9C150007E9B92 /* main.m in Sources */,
 			);

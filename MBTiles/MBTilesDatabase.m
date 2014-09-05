@@ -31,6 +31,7 @@
         if(base)
         {
             _dbFile = [base retain];
+            _dbQueue = [[FMDatabaseQueue databaseQueueWithPath:url.path] retain];
             
             if (![_dbFile open])
             {
@@ -89,6 +90,7 @@
 - (void) dealloc
 {
     [_dbFile close];
+    [_dbQueue release];
     [_dbFile release];
     [_dbInfos release];
     [super dealloc];
@@ -123,5 +125,23 @@
     
     [_dbFile commit];
     
+}
+
+- (void) addTile:(MBTile *)tile
+{
+    [self addTiles:@[tile]];
+}
+
+- (void) addTiles:(NSArray*) tilesArray
+{
+    [_dbQueue inDatabase:^(FMDatabase * db){
+       
+        [db beginTransaction];
+        for(MBTile * tile in tilesArray)
+        {
+            [db executeQuery:@"INSERT INTO tiles VALUES (?,?,?,?)",tile.zoomLevel, tile.column, tile.row, tile.blob];
+        }
+         [db commit];
+    }];
 }
 @end
