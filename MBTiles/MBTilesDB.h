@@ -12,6 +12,7 @@
 #import "MBTilesDatabaseInfos.h"
 #import "MBFoundation.h"
 #import "MBTileDataSource.h"
+#import "MBTileCache.h"
 
 
 @interface MBTilesDB : NSObject <MBTileDataSource>
@@ -21,7 +22,11 @@
    FMDatabaseQueue * _dbQueue;
     
    MBTilesDatabaseInfos * _dbInfos;
-    BOOL _useCache;
+   MBTileCache * _tileCache;
+    
+   BOOL _useCache;
+    
+    
 }
 
 - (id) initWithBaseURL:(NSURL*) url andInfos:(MBTilesDatabaseInfos*) infos;

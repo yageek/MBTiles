@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define MBTileMake(ROW,COLUMN,ZOOM) (MBTile){.row = ROW, .column = COLUMN, .zoomLevel = ZOOM}
+
 typedef struct  {
     uint32_t row, column;
 	short zoomLevel;

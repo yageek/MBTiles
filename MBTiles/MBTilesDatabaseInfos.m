@@ -32,10 +32,10 @@
 }
 - (NSString*) description
 {
-    return [NSString stringWithFormat:@"[MBTILES] %@: %@ %li %@ %@ ", _name, _description, _version, [self typeStringFromType:_type],  [self formatStringFromTilesFormat:_format]];
+    return [NSString stringWithFormat:@"[MBTILES] %@: %@ %li %@ %@ ", _name, _description, _version, [MBTilesDatabaseInfos typeStringFromType:_type],  [MBTilesDatabaseInfos formatStringFromTilesFormat:_format]];
 }
 
-- (NSString *) formatStringFromTilesFormat:(MBTilesDatabaseTileFormat) format
++ (NSString *) formatStringFromTilesFormat:(MBTilesDatabaseTileFormat) format
 {
     if(format == MBTilesDatabaseTileFormatJPG)
         return @"JPG";
@@ -43,11 +43,26 @@
         return @"PNG";
 }
 
-- (NSString * )typeStringFromType:(MBTilesDatabaseType) type
++ (NSString * )typeStringFromType:(MBTilesDatabaseType) type
 {
     if(type == MBTilesDatabaseTypeBaseLayer)
         return @"baseLayer";
     else
         return @"overlay";
+}
+
++ (MBTilesDatabaseTileFormat) formatFromFormatString:(NSString* ) format
+{
+    if([format isEqualToString:@"png"])
+        return MBTilesDatabaseTileFormatPNG;
+    else
+        return MBTilesDatabaseTileFormatJPG;
+}
++ (MBTilesDatabaseType) typeFromTypeString:(NSString*) type
+{
+    if([type isEqualToString:@"overlay"])
+        return MBTilesDatabaseTypeOverlay;
+    else
+        return MBTilesDatabaseTypeBaseLayer;
 }
 @end

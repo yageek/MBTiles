@@ -46,6 +46,7 @@
                 {
                     _dbInfos = [infos retain];
                     [self createBasicTables];
+                    _tileCache = [[MBTileCache alloc] init];
                     
                 }
                 else
@@ -70,12 +71,17 @@
                     readInfos.name = [_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'name'"];
                     readInfos.description = [_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'description'"];
                     readInfos.version = [[_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'version'"] integerValue];
-                    readInfos.type = [[_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'type'"] integerValue];
-                    readInfos.format = [[_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'format'"] integerValue];
+                    
+                    
+                    NSString * typeString = [_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'type'"] ;
+                    NSString * formatString = [_dbFile stringForQuery:@"SELECT value FROM metadata WHERE name = 'format'"];
 
+                    readInfos.type = [MBTilesDatabaseInfos typeFromTypeString:typeString];
+                    readInfos.format = [MBTilesDatabaseInfos formatFromFormatString:formatString];
                     _dbInfos = readInfos;
                     
                     NSLog(@"Infos: %@", _dbInfos);
+                   _tileCache = [[MBTileCache alloc] init];
                 }
             }
         }
@@ -95,6 +101,7 @@
     [_dbQueue release];
     [_dbFile release];
     [_dbInfos release];
+    [_tileCache release];
     [super dealloc];
 }
 
@@ -164,12 +171,44 @@
 #pragma mark - MBTilesDataSource
 - (CGImageRef) CGImageForTile:(MBTile)tile
 {
+    
+    __block CGImageRef image = NULL;
+    if(_useCache && [_tileCache containsTile:tile])
+    {
+        return [_tileCache CGImageForTile:tile];
+    }
+    
     [_dbQueue inDatabase:^(FMDatabase * db){
 
         
-        [db executeQuery:@""];
+     NSData * data = [db dataForQuery:@"SELECT tile_data FROM tiles WHERE zoom_level = ? and tile_column = ? and tile_row = ?", @(tile.zoomLevel),@(tile.column),@(tile.row)];
+        
+        if(data)
+        {
+            CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef) data);
+            if(_dbInfos.type == MBTilesDatabaseTileFormatJPG)
+            {
+              image = CGImageCreateWithJPEGDataProvider(provider, NULL, YES, kCGRenderingIntentDefault);
+            }
+            else
+            {
+               image = CGImageCreateWithPNGDataProvider(provider, NULL, YES, kCGRenderingIntentDefault);
+            }
+            
+            if(image)
+            {
+                [_tileCache addCGImage:image forTile:tile];
+                CGImageRelease(image);
+            }
+            
+            CGDataProviderRelease(provider);
+
+            
+        }
     }];
     
-    return NULL;
+    return image;
 }
+
+
 @end

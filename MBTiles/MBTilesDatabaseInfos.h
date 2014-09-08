@@ -34,4 +34,9 @@ typedef NS_ENUM(NSInteger, MBTilesDatabaseTileFormat){
 @property(nonatomic,readwrite) MBTilesDatabaseType type;
 @property(nonatomic,readwrite) NSInteger version;
 
+
++ (MBTilesDatabaseType) typeFromTypeString:(NSString*) type;
++ (MBTilesDatabaseTileFormat) formatFromFormatString:(NSString* ) format;
++ (NSString * )typeStringFromType:(MBTilesDatabaseType) type;
++ (NSString *) formatStringFromTilesFormat:(MBTilesDatabaseTileFormat) format;
 @end
