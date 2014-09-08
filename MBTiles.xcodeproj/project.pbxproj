@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D9CE94F27774C40AA540AEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B123515C5D894025B3CA01D0 /* libPods.a */; };
 		AC69592D19BDECD100EBB16A /* MBTileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69592C19BDECD100EBB16A /* MBTileCache.m */; };
+		AC69593019BDF63900EBB16A /* MBMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69592F19BDF63900EBB16A /* MBMapView.m */; };
 		AC83123519B9C150007E9B92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83123419B9C150007E9B92 /* Cocoa.framework */; };
 		AC83123F19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83123D19B9C150007E9B92 /* InfoPlist.strings */; };
 		AC83124119B9C150007E9B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83124019B9C150007E9B92 /* main.m */; };
@@ -40,6 +41,8 @@
 		AC69592A19BDDE6E00EBB16A /* MBTileDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTileDataSource.h; sourceTree = "<group>"; };
 		AC69592B19BDECD100EBB16A /* MBTileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTileCache.h; sourceTree = "<group>"; };
 		AC69592C19BDECD100EBB16A /* MBTileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTileCache.m; sourceTree = "<group>"; };
+		AC69592E19BDF63900EBB16A /* MBMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapView.h; sourceTree = "<group>"; };
+		AC69592F19BDF63900EBB16A /* MBMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapView.m; sourceTree = "<group>"; };
 		AC83123119B9C150007E9B92 /* MBTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC83123419B9C150007E9B92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AC83123719B9C150007E9B92 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,8 @@
 				AC83126C19B9C251007E9B92 /* MBTilesDB.m */,
 				AC83127119B9F36A007E9B92 /* MBFoundation.h */,
 				AC69592A19BDDE6E00EBB16A /* MBTileDataSource.h */,
+				AC69592E19BDF63900EBB16A /* MBMapView.h */,
+				AC69592F19BDF63900EBB16A /* MBMapView.m */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */,
 				AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */,
 				AC69592D19BDECD100EBB16A /* MBTileCache.m in Sources */,
+				AC69593019BDF63900EBB16A /* MBMapView.m in Sources */,
 				AC83124119B9C150007E9B92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

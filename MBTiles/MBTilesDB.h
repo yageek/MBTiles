@@ -13,8 +13,6 @@
 #import "MBFoundation.h"
 #import "MBTileDataSource.h"
 #import "MBTileCache.h"
-
-
 @interface MBTilesDB : NSObject <MBTileDataSource>
 {
     

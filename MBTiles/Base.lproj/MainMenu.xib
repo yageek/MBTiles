@@ -13,7 +13,6 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="YGAppDelegate">
             <connections>
-                <outlet property="imageView" destination="s2W-eh-SdA" id="DIS-eZ-Tuk"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -672,16 +671,9 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
+            <view key="contentView" id="EiT-Mj-1SZ" customClass="MBMapView">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-eh-SdA">
-                        <rect key="frame" x="137" y="118" width="202" height="187"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="dae-LB-EO3"/>
-                    </imageView>
-                </subviews>
             </view>
         </window>
     </objects>

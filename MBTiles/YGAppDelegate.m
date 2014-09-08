@@ -22,9 +22,7 @@
     MBTilesDatabaseInfos * infos = [[[MBTilesDatabaseInfos alloc] initWithName:@"TEst" description:@"Desc" version:1 type:MBTilesDatabaseTypeBaseLayer format:MBTilesDatabaseTileFormatPNG] autorelease];
     MBTilesDB * dataBase = [[MBTilesDB alloc] initWithBaseURL:url andInfos:infos];
     
-    CGImageRef image = [dataBase CGImageForTile:MBTileMake(0, 0, 0)];
-    
-    self.imageView.image = [[NSImage alloc] initWithCGImage:image size:NSZeroSize];
+
     [dataBase release];
 }
 
