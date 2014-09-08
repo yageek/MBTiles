@@ -10,21 +10,24 @@
 #import <FMDB/FMDB.h>
 
 #import "MBTilesDatabaseInfos.h"
-#import "MBTile.h"
+#import "MBFoundation.h"
+#import "MBTileDataSource.h"
 
-@interface MBTilesDatabase : NSObject
+
+@interface MBTilesDB : NSObject <MBTileDataSource>
 {
     
    FMDatabase * _dbFile;
    FMDatabaseQueue * _dbQueue;
     
    MBTilesDatabaseInfos * _dbInfos;
+    BOOL _useCache;
 }
 
 - (id) initWithBaseURL:(NSURL*) url andInfos:(MBTilesDatabaseInfos*) infos;
 - (id) initWithBaseURL:(NSURL*) url;
 
-- (void) addTile:(MBTile*) tile;
-- (void) addTiles:(NSArray*) tilesArray;
-- (
+- (void) addBlobs:(NSArray*) blobs ForTile:(NSArray*) tiles;
+- (void) addBlob:(NSData*) blob ForTile:(MBTile) tile;
+
 @end

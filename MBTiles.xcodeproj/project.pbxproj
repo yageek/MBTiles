@@ -20,9 +20,8 @@
 		AC83125D19B9C150007E9B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83125B19B9C150007E9B92 /* InfoPlist.strings */; };
 		AC83125F19B9C150007E9B92 /* MBTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83125E19B9C150007E9B92 /* MBTilesTests.m */; };
 		AC83126A19B9C185007E9B92 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AC83126919B9C185007E9B92 /* Podfile */; };
-		AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */; };
+		AC83126D19B9C251007E9B92 /* MBTilesDB.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126C19B9C251007E9B92 /* MBTilesDB.m */; };
 		AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */; };
-		AC83127319B9F36A007E9B92 /* MBTile.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83127219B9F36A007E9B92 /* MBTile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		320585CF955A45CD9347C56E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AC69592A19BDDE6E00EBB16A /* MBTileDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTileDataSource.h; sourceTree = "<group>"; };
 		AC83123119B9C150007E9B92 /* MBTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC83123419B9C150007E9B92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AC83123719B9C150007E9B92 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,12 +57,11 @@
 		AC83125C19B9C150007E9B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC83125E19B9C150007E9B92 /* MBTilesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTilesTests.m; sourceTree = "<group>"; };
 		AC83126919B9C185007E9B92 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		AC83126B19B9C251007E9B92 /* MBTilesDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDatabase.h; sourceTree = "<group>"; };
-		AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabase.m; sourceTree = "<group>"; };
+		AC83126B19B9C251007E9B92 /* MBTilesDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDB.h; sourceTree = "<group>"; };
+		AC83126C19B9C251007E9B92 /* MBTilesDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDB.m; sourceTree = "<group>"; };
 		AC83126E19B9E5F9007E9B92 /* MBTilesDatabaseInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTilesDatabaseInfos.h; sourceTree = "<group>"; };
 		AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTilesDatabaseInfos.m; sourceTree = "<group>"; };
-		AC83127119B9F36A007E9B92 /* MBTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTile.h; sourceTree = "<group>"; };
-		AC83127219B9F36A007E9B92 /* MBTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTile.m; sourceTree = "<group>"; };
+		AC83127119B9F36A007E9B92 /* MBFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFoundation.h; sourceTree = "<group>"; };
 		B123515C5D894025B3CA01D0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,10 +177,10 @@
 			children = (
 				AC83126E19B9E5F9007E9B92 /* MBTilesDatabaseInfos.h */,
 				AC83126F19B9E5F9007E9B92 /* MBTilesDatabaseInfos.m */,
-				AC83126B19B9C251007E9B92 /* MBTilesDatabase.h */,
-				AC83126C19B9C251007E9B92 /* MBTilesDatabase.m */,
-				AC83127119B9F36A007E9B92 /* MBTile.h */,
-				AC83127219B9F36A007E9B92 /* MBTile.m */,
+				AC83126B19B9C251007E9B92 /* MBTilesDB.h */,
+				AC83126C19B9C251007E9B92 /* MBTilesDB.m */,
+				AC83127119B9F36A007E9B92 /* MBFoundation.h */,
+				AC69592A19BDDE6E00EBB16A /* MBTileDataSource.h */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -321,9 +320,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC83126D19B9C251007E9B92 /* MBTilesDatabase.m in Sources */,
+				AC83126D19B9C251007E9B92 /* MBTilesDB.m in Sources */,
 				AC83127019B9E5F9007E9B92 /* MBTilesDatabaseInfos.m in Sources */,
-				AC83127319B9F36A007E9B92 /* MBTile.m in Sources */,
 				AC83124819B9C150007E9B92 /* YGAppDelegate.m in Sources */,
 				AC83124119B9C150007E9B92 /* main.m in Sources */,
 			);

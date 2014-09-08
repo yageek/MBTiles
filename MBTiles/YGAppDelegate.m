@@ -7,7 +7,7 @@
 //
 
 #import "YGAppDelegate.h"
-#import "MBTilesDatabase.h"
+#import "MBTilesDB.h"
 #import "MBTilesDatabaseInfos.h"
 @implementation YGAppDelegate
 
@@ -18,7 +18,7 @@
     
     NSURL * url = [NSURL URLWithString:[NSHomeDirectory() stringByAppendingPathComponent:@"test.db"]];
     MBTilesDatabaseInfos * infos = [[[MBTilesDatabaseInfos alloc] initWithName:@"TEst" description:@"Desc" version:1 type:MBTilesDatabaseTypeBaseLayer format:MBTilesDatabaseTileFormatPNG] autorelease];
-    MBTilesDatabase * dataBase = [[MBTilesDatabase alloc] initWithBaseURL:url andInfos:infos];
+    MBTilesDB * dataBase = [[MBTilesDB alloc] initWithBaseURL:url andInfos:infos];
     
     
     

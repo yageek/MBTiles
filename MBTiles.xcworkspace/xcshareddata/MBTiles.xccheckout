@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0E995324-DD01-4E19-8759-36179381748A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MBTiles</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>78502A81-4727-4AD5-8C69-CC73EEDB2A6F</key>
+		<string>ssh://github.com/yageek/MBTiles.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MBTiles.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>78502A81-4727-4AD5-8C69-CC73EEDB2A6F</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/yageek/MBTiles.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>78502A81-4727-4AD5-8C69-CC73EEDB2A6F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>78502A81-4727-4AD5-8C69-CC73EEDB2A6F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MBTiles</string>
+		</dict>
+	</array>
+</dict>
+</plist>

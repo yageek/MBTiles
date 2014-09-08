@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 ___yageek__. All rights reserved.
 //
 
-#import "MBTilesDatabase.h"
+#import "MBTilesDB.h"
 #pragma mark - MBTilesDatabase
-@implementation MBTilesDatabase
+@implementation MBTilesDB
+
+@synthesize useCache = _useCache;
 
 - (id) initWithBaseURL:(NSURL *)url
 {
@@ -127,21 +129,47 @@
     
 }
 
-- (void) addTile:(MBTile *)tile
+
+- (void) addBlobs:(NSArray*) blobs ForTile:(NSArray*) tiles
 {
-    [self addTiles:@[tile]];
+    if(blobs.count != tiles.count)
+        return;
+    
+    [_dbQueue inDatabase:^(FMDatabase * db){
+        
+        [db beginTransaction];
+        
+        NSUInteger index;
+        for(index = 0; index < blobs.count; index++)
+        {
+            NSValue * tileValue = tiles[index];
+            NSData * blob = blobs[index];
+            MBTile tile;
+            
+            [tileValue getValue:&tile];
+            [db executeQuery:@"INSERT INTO tiles VALUES (?,?,?,?)",tile.zoomLevel, tile.column, tile.row, blob];
+        }
+        [db commit];
+    }];
+
+    
+}
+- (void) addBlob:(NSData*) blob ForTile:(MBTile) tile
+{
+    NSValue * tileValue = [NSValue valueWithBytes:&tile objCType:@encode(MBTile)];
+    
+    [self addBlobs:@[blob] ForTile:@[tileValue]];
 }
 
-- (void) addTiles:(NSArray*) tilesArray
+#pragma mark - MBTilesDataSource
+- (CGImageRef) CGImageForTile:(MBTile)tile
 {
     [_dbQueue inDatabase:^(FMDatabase * db){
-       
-        [db beginTransaction];
-        for(MBTile * tile in tilesArray)
-        {
-            [db executeQuery:@"INSERT INTO tiles VALUES (?,?,?,?)",tile.zoomLevel, tile.column, tile.row, tile.blob];
-        }
-         [db commit];
+
+        
+        [db executeQuery:@""];
     }];
+    
+    return NULL;
 }
 @end
