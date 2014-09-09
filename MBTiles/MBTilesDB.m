@@ -217,5 +217,8 @@
     return image;
 }
 
-
+- (CGFloat) tileSide
+{
+    return _dbInfos.tileSide;
+}
 @end

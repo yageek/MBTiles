@@ -11,7 +11,9 @@
 
 @protocol MBTileDataSource <NSObject>
 
+@required
 - (CGImageRef) CGImageForTile:(MBTile) tile;
+- (CGFloat) tileSide;
 
 /** A `BOOL` value indicating whether the tiles from this source should be cached. */
 @property (nonatomic, assign, getter=isUsingCache) BOOL useCache;

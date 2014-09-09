@@ -5,7 +5,8 @@
 //  Created by Yannick Heinrich on 08/09/14.
 //  Copyright (c) 2014 ___yageek__. All rights reserved.
 //
-#import <QuartzCore/QuartzCore.h>
+
+#import <CoreFoundation/CoreFoundation.h>
 #import "MBMapView.h"
 
 @implementation MBMapView
@@ -36,81 +37,44 @@
 }
 - (CALayer *) makeBackingLayer
 {
-    CATiledLayer * tilelayer =  [CATiledLayer new];
-    return tilelayer;
-}
-- (void)drawLayer:(CATiledLayer *)layer inContext:(CGContextRef)ctx
-{
-    CGRect rect   = CGContextGetClipBoundingBox(ctx);
-    int column = floor(rect.origin.x / layer.tileSize.width); int row = floor(rect.origin.y / layer.tileSize.height);
-    
-    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,2)];
-    
-    CGContextDrawImage(ctx, CGRectMake(rect.origin.x, rect.origin.y, 256, 256), image);
-    
-    
-	CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 1);  // outline green
-	CGContextStrokeRect(ctx, rect);
-    
-
-    CGContextSetRGBFillColor(ctx, 0.0, 0.0, 0.0, 1.0);
-    CGContextSetLineWidth(ctx, 2.0);
-    CGContextSelectFont(ctx, "Helvetica", 12.0, kCGEncodingMacRoman);
-    CGContextSetCharacterSpacing(ctx, 1.7);
-    CGContextSetTextDrawingMode(ctx, kCGTextFill);
-    
-    
-    char text [5] = {0};
-    sprintf(text, "(%i,%i)", row,column);
-    CGContextShowTextAtPoint(ctx, rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2,text, 5);
+    CAScrollLayer * rootLayer =  [CAScrollLayer new];
+    return rootLayer;
 }
 
 
 - (void)viewDidEndLiveResize
 {
     [super viewDidEndLiveResize];
-    
-    [self.layer setNeedsDisplay];
+     _tiledLayer.frame = self.layer.bounds;
+    [_tiledLayer setNeedsDisplay];
     
 }
 - (void) setDataSource:(id<MBTileDataSource>)dataSource
 {
     _dataSource = dataSource;
+
+    [_tileDelegate release];
+
+    [_tiledLayer removeFromSuperlayer];
+    [_tiledLayer release];
+    _tiledLayer = [[CATiledLayer new] retain];
+    _tiledLayer.frame = self.layer.bounds;
     
     
-    [self.layer setNeedsDisplay];
+    _tileDelegate = [[MBTilesDelegate alloc] initWithTileDataSource:dataSource];
+    _tiledLayer.delegate = _tileDelegate;
+    _tiledLayer.tileSize = CGSizeMake([_dataSource tileSide],[_dataSource tileSide]);
+    [self.layer addSublayer:_tiledLayer];
+    
+    [_tiledLayer setNeedsDisplay];
 }
 
-#pragma mark - Managing Scroll
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
 
-- (void) touchesBeganWithEvent:(NSEvent *)event
+-(void) moveDown:(id)sender
 {
-    NSLog(@"Touches");
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x, _tiledLayer.position.y -10.0f);
 }
-
-- (void) touchesMovedWithEvent:(NSEvent *)event
-{
-    
-}
-
-- (void) touchesEndedWithEvent:(NSEvent *)event
-{
-    
-}
-
-- (void)beginGestureWithEvent:(NSEvent *)event
-{
-    
-}
-
-- (void) endGestureWithEvent:(NSEvent *)event
-{
-    
-}
-- (void) swipeWithEvent:(NSEvent *)event
-{
-    
-}
-
-
 @end

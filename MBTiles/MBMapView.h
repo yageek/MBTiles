@@ -7,11 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
 #import "MBTileDataSource.h"
+#import "MBTilesDelegate.h"
 
 @interface MBMapView : NSView{
     
-    id<MBTileDataSource> _dataSource;
+    MBTilesDelegate * _tileDelegate;
+    CATiledLayer *_tiledLayer;
+    
 }
 
 @property(assign, nonatomic,readwrite) id<MBTileDataSource> dataSource;
