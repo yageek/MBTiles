@@ -44,9 +44,9 @@
     CGRect rect   = CGContextGetClipBoundingBox(ctx);
     int column = floor(rect.origin.x / layer.tileSize.width); int row = floor(rect.origin.y / layer.tileSize.height);
     
-    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,5)];
+    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,2)];
     
-    CGContextDrawImage(ctx, rect, image);
+    CGContextDrawImage(ctx, CGRectMake(rect.origin.x, rect.origin.y, 256, 256), image);
     
     
 	CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 1);  // outline green
@@ -80,5 +80,37 @@
     
     [self.layer setNeedsDisplay];
 }
+
+#pragma mark - Managing Scroll
+
+- (void) touchesBeganWithEvent:(NSEvent *)event
+{
+    NSLog(@"Touches");
+}
+
+- (void) touchesMovedWithEvent:(NSEvent *)event
+{
+    
+}
+
+- (void) touchesEndedWithEvent:(NSEvent *)event
+{
+    
+}
+
+- (void)beginGestureWithEvent:(NSEvent *)event
+{
+    
+}
+
+- (void) endGestureWithEvent:(NSEvent *)event
+{
+    
+}
+- (void) swipeWithEvent:(NSEvent *)event
+{
+    
+}
+
 
 @end
