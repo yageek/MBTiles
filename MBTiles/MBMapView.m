@@ -34,16 +34,21 @@
     }
     return self;
 }
-
 - (CALayer *) makeBackingLayer
 {
-    return [CATiledLayer new];
+    CATiledLayer * tilelayer =  [CATiledLayer new];
+    return tilelayer;
 }
 
 - (void)drawLayer:(CATiledLayer *)layer inContext:(CGContextRef)ctx
 {
     CGRect rect   = CGContextGetClipBoundingBox(ctx);
     int x = floor(rect.origin.x / layer.tileSize.width); int y = floor(rect.origin.y / layer.tileSize.height);
+    
+    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(x, y, 3)];
+    
+    CGContextDrawImage(ctx, rect, image);
+    
     
 	CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 1);  // outline green
 	CGContextStrokeRect(ctx, rect);
