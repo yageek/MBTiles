@@ -51,6 +51,9 @@
 }
 - (void) setDataSource:(id<MBTileDataSource>)dataSource
 {
+    if(!dataSource)
+        return;
+    
     _dataSource = dataSource;
 
     [_tileDelegate release];
@@ -75,6 +78,36 @@
 
 -(void) moveDown:(id)sender
 {
-    _tiledLayer.position = CGPointMake(_tiledLayer.position.x, _tiledLayer.position.y -10.0f);
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x, _tiledLayer.position.y +100.0f);
+}
+
+
+-(void) moveUp:(id)sender
+{
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x, _tiledLayer.position.y -100.0f);
+}
+-(void) moveLeft:(id)sender
+{
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x -100.0f, _tiledLayer.position.y);
+}
+
+
+-(void) moveRight:(id)sender
+{
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x+100.0f, _tiledLayer.position.y );
+}
+
+- (void) mouseDragged:(NSEvent *)theEvent
+{
+    [CATransaction setAnimationDuration:0];
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x+[theEvent deltaX], _tiledLayer.position.y - [theEvent deltaY]);
+}
+
+-(void) swipeWithEvent:(NSEvent *)event
+{
+    [CATransaction setAnimationDuration:0];
+    _tiledLayer.position = CGPointMake(_tiledLayer.position.x+[theEvent deltaX], _tiledLayer.position.y - [theEvent deltaY]);
+    
+    
 }
 @end

@@ -23,7 +23,7 @@
     CGRect rect   = CGContextGetClipBoundingBox(ctx);
     int column = floor(rect.origin.x / layer.tileSize.width); int row = floor(rect.origin.y / layer.tileSize.height);
     
-    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,5)];
+    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,4)];
     
     CGContextDrawImage(ctx, CGRectMake(rect.origin.x, rect.origin.y, 256, 256), image);
     

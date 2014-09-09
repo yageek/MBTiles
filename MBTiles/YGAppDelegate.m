@@ -19,8 +19,7 @@
     
     
     NSURL * url = [NSURL URLWithString:[NSHomeDirectory() stringByAppendingPathComponent:@"test.mbtiles"]];
-    MBTilesDatabaseInfos * infos = [[[MBTilesDatabaseInfos alloc] initWithName:@"TEst" description:@"Desc" version:1 type:MBTilesDatabaseTypeBaseLayer format:MBTilesDatabaseTileFormatPNG] autorelease];
-    MBTilesDB * dataBase = [[MBTilesDB alloc] initWithBaseURL:url andInfos:infos];
+    MBTilesDB * dataBase = [[MBTilesDB alloc] initWithBaseURL:url andInfos:nil];
 
 
     self.mapView.dataSource = dataBase;
