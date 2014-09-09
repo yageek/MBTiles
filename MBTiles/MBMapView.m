@@ -39,13 +39,12 @@
     CATiledLayer * tilelayer =  [CATiledLayer new];
     return tilelayer;
 }
-
 - (void)drawLayer:(CATiledLayer *)layer inContext:(CGContextRef)ctx
 {
     CGRect rect   = CGContextGetClipBoundingBox(ctx);
-    int x = floor(rect.origin.x / layer.tileSize.width); int y = floor(rect.origin.y / layer.tileSize.height);
+    int column = floor(rect.origin.x / layer.tileSize.width); int row = floor(rect.origin.y / layer.tileSize.height);
     
-    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(x, y, 3)];
+    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,5)];
     
     CGContextDrawImage(ctx, rect, image);
     
@@ -62,7 +61,7 @@
     
     
     char text [5] = {0};
-    sprintf(text, "(%i,%i)", x,y);
+    sprintf(text, "(%i,%i)", row,column);
     CGContextShowTextAtPoint(ctx, rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2,text, 5);
 }
 
