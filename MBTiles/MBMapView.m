@@ -45,7 +45,7 @@
 - (void)viewDidEndLiveResize
 {
     [super viewDidEndLiveResize];
-     _tiledLayer.frame = self.layer.bounds;
+
     [_tiledLayer setNeedsDisplay];
     
 }
@@ -58,7 +58,7 @@
     [_tiledLayer removeFromSuperlayer];
     [_tiledLayer release];
     _tiledLayer = [[CATiledLayer new] retain];
-    _tiledLayer.frame = self.layer.bounds;
+    _tiledLayer.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds), 50000, 50000);
     
     
     _tileDelegate = [[MBTilesDelegate alloc] initWithTileDataSource:dataSource];
