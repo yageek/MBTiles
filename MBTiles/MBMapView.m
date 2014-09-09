@@ -15,8 +15,6 @@
 - (void) commonInit
 {
     [self setWantsLayer:YES];
-    
-    [self.layer setNeedsDisplay];
 
 }
 - (id) initWithCoder:(NSCoder *)aDecoder
@@ -44,14 +42,33 @@
 
 - (void)drawLayer:(CATiledLayer *)layer inContext:(CGContextRef)ctx
 {
-    NSRect bounds = CGContextGetClipBoundingBox(ctx);
-    NSInteger x = floor(bounds.origin.x / layer.tileSize.width);
-    NSInteger y = floor(bounds.origin.y / layer.tileSize.height);
+    CGRect rect   = CGContextGetClipBoundingBox(ctx);
+    int x = floor(rect.origin.x / layer.tileSize.width); int y = floor(rect.origin.y / layer.tileSize.height);
+    
+	CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 1);  // outline green
+	CGContextStrokeRect(ctx, rect);
+    
+
+    CGContextSetRGBFillColor(ctx, 0.0, 0.0, 0.0, 1.0);
+    CGContextSetLineWidth(ctx, 2.0);
+    CGContextSelectFont(ctx, "Helvetica", 12.0, kCGEncodingMacRoman);
+    CGContextSetCharacterSpacing(ctx, 1.7);
+    CGContextSetTextDrawingMode(ctx, kCGTextFill);
     
     
-    
+    char text [5] = {0};
+    sprintf(text, "(%i,%i)", x,y);
+    CGContextShowTextAtPoint(ctx, rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2,text, 5);
 }
 
+
+- (void)viewDidEndLiveResize
+{
+    [super viewDidEndLiveResize];
+    
+    [self.layer setNeedsDisplay];
+    
+}
 - (void) setDataSource:(id<MBTileDataSource>)dataSource
 {
     _dataSource = dataSource;
@@ -59,4 +76,5 @@
     
     [self.layer setNeedsDisplay];
 }
+
 @end

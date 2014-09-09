@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, MBTilesDatabaseTileFormat){
     MBTilesDatabaseTileFormat _format;
     MBTilesDatabaseType _type;
     NSInteger _version;
+    CGFloat _tileSide;
 }
 
 - (id) initWithName:(NSString*) name description:(NSString*) description version:(NSInteger) version type:(MBTilesDatabaseType) type format:(MBTilesDatabaseTileFormat) format;
@@ -33,7 +34,7 @@ typedef NS_ENUM(NSInteger, MBTilesDatabaseTileFormat){
 @property(nonatomic,readwrite) MBTilesDatabaseTileFormat format;
 @property(nonatomic,readwrite) MBTilesDatabaseType type;
 @property(nonatomic,readwrite) NSInteger version;
-
+@property(nonatomic) CGFloat tileSide;
 
 + (MBTilesDatabaseType) typeFromTypeString:(NSString*) type;
 + (MBTilesDatabaseTileFormat) formatFromFormatString:(NSString* ) format;

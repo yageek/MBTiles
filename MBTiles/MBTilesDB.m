@@ -80,6 +80,13 @@
                     readInfos.format = [MBTilesDatabaseInfos formatFromFormatString:formatString];
                     _dbInfos = readInfos;
                     
+                    CGImageRef image = [self CGImageForTile:MBTileMake(0, 0, 0)];
+                    
+                    readInfos.tileSide = CGImageGetHeight(image);
+                    
+                    [_tileCache removeImageForTile:MBTileMake(0, 0, 0)];
+                    
+                    
                     NSLog(@"Infos: %@", _dbInfos);
                    _tileCache = [[MBTileCache alloc] init];
                 }

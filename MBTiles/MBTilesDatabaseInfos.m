@@ -10,7 +10,7 @@
 
 @implementation MBTilesDatabaseInfos
 
-@synthesize name = _name, version = _version, type =_type, format = _format, description = _description;
+@synthesize name = _name, version = _version, type =_type, format = _format, description = _description, tileSide = _tileSide;
 
 
 - (id) initWithName:(NSString*) name description:(NSString*) description version:(NSInteger) version type:(MBTilesDatabaseType) type format:(MBTilesDatabaseTileFormat) format
