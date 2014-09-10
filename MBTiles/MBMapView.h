@@ -15,8 +15,9 @@
     
     MBTilesDelegate * _tileDelegate;
     CATiledLayer *_tiledLayer;
-    
+    NSInteger _zoomLevel;
 }
 
 @property(assign, nonatomic,readwrite) id<MBTileDataSource> dataSource;
+@property(nonatomic) NSInteger zoomLevel;
 @end

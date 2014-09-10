@@ -10,6 +10,9 @@
 #import "MBTileDataSource.h"
 @interface MBTilesDelegate : NSObject{
     id<MBTileDataSource> _dataSource;
+    NSInteger _zoomLevel;
 }
 - (id) initWithTileDataSource:(id<MBTileDataSource>) dataSource;
+
+@property(nonatomic) NSInteger zoomLevel;
 @end

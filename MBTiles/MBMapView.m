@@ -11,7 +11,7 @@
 
 @implementation MBMapView
 
-@synthesize dataSource = _dataSource;
+@synthesize dataSource = _dataSource, zoomLevel = _zoomLevel;
 
 - (void) commonInit
 {
@@ -91,6 +91,13 @@
     _tiledLayer.position = CGPointMake(_tiledLayer.position.x -100.0f, _tiledLayer.position.y);
 }
 
+- (void) setZoomLevel:(NSInteger)zoomLevel
+{
+    _zoomLevel = zoomLevel;
+    _tileDelegate.zoomLevel = zoomLevel;
+    
+    [_tiledLayer setNeedsDisplay];
+}
 
 -(void) moveRight:(id)sender
 {
@@ -103,11 +110,21 @@
     _tiledLayer.position = CGPointMake(_tiledLayer.position.x+[theEvent deltaX], _tiledLayer.position.y - [theEvent deltaY]);
 }
 
--(void) swipeWithEvent:(NSEvent *)event
+
+-(void) swipeWithEvent:(NSEvent *)theEvent
 {
     [CATransaction setAnimationDuration:0];
     _tiledLayer.position = CGPointMake(_tiledLayer.position.x+[theEvent deltaX], _tiledLayer.position.y - [theEvent deltaY]);
     
+}
+- (void) scrollWheel:(NSEvent *)theEvent
+{
+    NSLog(@"Scroll Delta: (%f,%f)", [theEvent scrollingDeltaX], [theEvent scrollingDeltaY]);
     
+      if([theEvent scrollingDeltaY] > 0)
+        self.zoomLevel = self.zoomLevel +1;
+    else
+        self.zoomLevel = self.zoomLevel -1;
+//    _tiledLayer.position = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 }
 @end

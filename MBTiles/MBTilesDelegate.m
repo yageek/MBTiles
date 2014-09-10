@@ -9,6 +9,8 @@
 #import "MBTilesDelegate.h"
 
 @implementation MBTilesDelegate
+@synthesize zoomLevel = _zoomLevel;
+
 - (id) initWithTileDataSource:(id<MBTileDataSource>) dataSource
 {
     if(self = [super init])
@@ -23,7 +25,7 @@
     CGRect rect   = CGContextGetClipBoundingBox(ctx);
     int column = floor(rect.origin.x / layer.tileSize.width); int row = floor(rect.origin.y / layer.tileSize.height);
     
-    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,4)];
+    CGImageRef image = [_dataSource CGImageForTile:MBTileMake(row,column,_zoomLevel)];
     
     CGContextDrawImage(ctx, CGRectMake(rect.origin.x, rect.origin.y, 256, 256), image);
     
@@ -41,7 +43,7 @@
     
     char text [5] = {0};
     sprintf(text, "(%i,%i)", row,column);
-    CGContextShowTextAtPoint(ctx, rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2,text, 5);
+    CGContextShowTextAtPoint(ctx, rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2,text, strlen(text));
 }
 
 @end
